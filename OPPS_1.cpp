@@ -2,7 +2,6 @@ CLASSES AND OBJECTS
 
 INBUILT CONSTRUCTORS AND DESTRUCTORS 
 
-
 #include <iostream>
 #include <cmath>
 #include <iomanip>
@@ -41,6 +40,12 @@ public: // access specifer public
     {
         this->rollno = rollno; // use of this keyword
         cout << "2 constructor called!" << endl;
+    }
+
+    student(int a, int r){
+        cout<< "constructor 3 called!"<<endl;
+        this-> age = a;
+        this-> rollno = r;
     }
 
     ~student()
@@ -93,8 +98,8 @@ int main()
     cout << "s5" << endl;
     s5->display();
 
-    // copy constructor  (student s6(s3);)
-    student *s6 = new student(s3);
+    // copy constructor  (student s6(s3);) or  (student s6 = s3;)
+    student *s6 = new student(s3);  
     cout << "s6" << endl;
     s6->display();
 
